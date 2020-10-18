@@ -68,8 +68,6 @@ export default class Chart extends Component {
 					}
 					// scalesPageToFit false for IOS and true for Android
                                         scalesPageToFit={Platform.OS === 'ios' ? false : true}
-					useWebKit={Platform.OS === 'ios' ? false : true}
-             				javaScriptEnabled={true}
 				/>	
 		)
 	}
