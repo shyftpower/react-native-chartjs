@@ -1,4 +1,5 @@
 var myChart = require("myChart");
+var myChartAnnotation = require("myChartAnnotation")
 
 // if( Chart || window.Chart ){
 				

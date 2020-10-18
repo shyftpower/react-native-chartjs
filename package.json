@@ -20,8 +20,11 @@
     "url": "https://github.com/KittyCookie/react-native-chartjs/issues"
   },
   "homepage": "https://github.com/KittyCookie/react-native-chartjs#readme",
-  "dependencies" : {
-    "react-native-webview":"^2.0.0"
+  "dependencies": {
+    "chartjs-plugin-annotation": "^0.5.7",
+    "react-native-webview": "^2.0.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.0.0"
   }
-
 }

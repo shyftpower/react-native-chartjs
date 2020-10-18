@@ -12,7 +12,8 @@ module.exports = {
     },
     resolve : {
         alias : {
-            myChart : 'Chart.bundle.min.js'
+            myChart : 'Chart.bundle.min.js',
+            myChartAnnotation: 'ChartAnnotation.bundle.min.js'
         },
         modules: [
             path.resolve(__dirname, './web/lib')
