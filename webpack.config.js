@@ -25,6 +25,6 @@ module.exports = {
             inlineSource : '.js$',
             cache : false, 
         }),
-        new HtmlWebpackInlineSourcePlugin()
+        new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin)
     ]
 }
