@@ -16,8 +16,6 @@ var settingChartScript = `
 	Chart.defaults.global.defaultFontSize={DEFAULT_FONT_SIZE};
 	var ctx = document.getElementById("myChart").getContext('2d');
 	var myChart = new Chart( ctx, {CONFIG} );
-	myChart.destroy();
-	myChart = new Chart( ctx, {CONFIG} );
 `;
 
 export default class Chart extends Component {
