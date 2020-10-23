@@ -35,10 +35,9 @@ export default class Chart extends Component {
 		}
 	}
 	componentWillReceiveProps(nextProps) {
-		this.setState({reload: false})
 		if( nextProps.chartConfiguration !== this.props.chartConfiguration
 			|| nextProps.defaultFontSize !== this.props.defaultFontSize ){
-				this.setState({reload: true})
+				this.setState({reload: false})
 			this.setChart(nextProps.chartConfiguration, nextProps.defaultFontSize );
 		}
 	}
