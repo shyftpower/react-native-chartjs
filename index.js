@@ -30,10 +30,15 @@ export default class Chart extends Component {
 	}
 	constructor(props) {
 		super(props);
+		this.setState = {
+			reload: true
+		}
 	}
 	componentWillReceiveProps(nextProps) {
+		this.setState({reload: false})
 		if( nextProps.chartConfiguration !== this.props.chartConfiguration
 			|| nextProps.defaultFontSize !== this.props.defaultFontSize ){
+				this.setState({reload: true})
 			this.setChart(nextProps.chartConfiguration, nextProps.defaultFontSize );
 		}
 	}
@@ -49,7 +54,7 @@ export default class Chart extends Component {
 
 	render() {
 		const defaultFontSize = this.props.defaultFontSize ? this.props.defaultFontSize : 12;
-		return ( < WebView style={{ flex : 1 }}
+		return ( this.state.reload && < WebView style={{ flex : 1 }}
 					originWhitelist={["*"]}
 					ref = {
 						ref => this.webview = ref

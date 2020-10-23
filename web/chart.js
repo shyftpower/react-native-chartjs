@@ -1,6 +1,7 @@
 var myChart = require("myChart");
 var myChartAnnotation = require("myChartAnnotation")
 
+document.querySelector("#chartContainer").innerHTML = '<canvas id="myChart" style="height : 100%"></canvas>';
 // if( Chart || window.Chart ){
 				
 // }
