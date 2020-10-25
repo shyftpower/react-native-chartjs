@@ -45,6 +45,7 @@ export default class Chart extends Component {
 			settingChartScript.replace('{CONFIG}', JSON.stringify( chartConfiguration ))
 				.replace('{DEFAULT_FONT_SIZE}', defaultFontSize )
 		);
+		this.webview.setWebChromeClient(new WebChromeClient());
 	}
 
 	render() {
@@ -67,7 +68,7 @@ export default class Chart extends Component {
 						}
 					}
 					// scalesPageToFit false for IOS and true for Android
-                                        scalesPageToFit={Platform.OS === 'ios' ? false : true}
+                                        scalesPageToFit={Platform.OS === 'ios' ? undefined : true}
 					useWebKit={false}
 				/>	
 		)
