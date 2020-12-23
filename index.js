@@ -31,7 +31,7 @@ export default class Chart extends Component {
 	constructor(props) {
 		super(props);
 	}
-	componentWillReceiveProps(nextProps) {
+	UNSAFE_componentWillReceiveProps(nextProps) {
 		if( nextProps.chartConfiguration !== this.props.chartConfiguration
 			|| nextProps.defaultFontSize !== this.props.defaultFontSize ){
 			this.setChart(nextProps.chartConfiguration, nextProps.defaultFontSize );
